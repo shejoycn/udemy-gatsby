@@ -3,7 +3,8 @@ module.exports = {
     title: `Gatsby Garb`,
     subtitle: `Gatsby Garb subtitle`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@shejoycn`,
+    author: `shejoycn`,
+    year :2020
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +16,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

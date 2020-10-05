@@ -19,6 +19,7 @@ const getSiteMetadata = graphql`
         title
         subtitle
         author
+        year
       }
     }
   }
@@ -45,7 +46,8 @@ const Layout = ({ children }) => {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a>Gatsby by {data.site.siteMetadata?.author}</a>
+          <a>Gatsby by{` `}{data.site.siteMetadata?.author}</a>
+          <a>{` `}@{data.site.siteMetadata?.year}</a>
         </footer>
       </div>
     </>
